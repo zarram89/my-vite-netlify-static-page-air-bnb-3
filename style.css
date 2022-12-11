@@ -91,11 +91,22 @@ place-items: center;
 
 /* Card */
 
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  margin-top: 50px;
+  padding: 0 35px;
+}
+
 .card {
+  position: relative;
   width: 176px;
   font-size: 12px;
   line-height: 13px;
   display: flex;
+  flex: 0 0 auto; 
   flex-direction: column;
 }
 
@@ -133,4 +144,14 @@ place-items: center;
 
 .card-price-mark {
   font-weight: 300;
+}
+
+.card-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: var(--basic-white);
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }

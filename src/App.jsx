@@ -8,12 +8,8 @@ function App() {
     return (
       <Card
         key={item.id}
-        img={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
+        // item={item} так нужно передавать props.item.location и т.д., а через spreadы сразу передаем все свойства в props компонента и item.свойство писать не надо
+        {...item}
       />)
   })
 
@@ -21,7 +17,9 @@ function App() {
     <div className="site">
       <Navbar />
       <Hero />
-      {cards}
+      <section className="cards-list">
+        {cards}
+      </section>
     </div>
   )
 }
